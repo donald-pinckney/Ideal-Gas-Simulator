@@ -1,22 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Thermo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cei-gA-s71"/>
-                        <viewControllerLayoutGuide type="bottom" id="O1X-57-Ctf"/>
+                        <viewControllerLayoutGuide type="top" id="D94-E3-Oyx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZaR-qh-mKA"/>
                     </layoutGuides>
-                    <sceneKitView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </sceneKitView>
+                    <view key="view" contentMode="scaleToFill" id="n2K-Cz-Jsb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhp-3l-EFA">
+                                <rect key="frame" x="16" y="28" width="736" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zhp-3l-EFA" secondAttribute="height" id="YDe-4A-pEb"/>
+                                </constraints>
+                            </sceneKitView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="ARS-s5-u1s">
+                                <rect key="frame" x="14" y="772" width="653" height="31"/>
+                                <connections>
+                                    <action selector="sliderNChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="TkI-DZ-V6p"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N = 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-kV-Wky">
+                                <rect key="frame" x="673" y="776" width="79" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="beJ-hT-0IN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zhp-3l-EFA" firstAttribute="top" secondItem="D94-E3-Oyx" secondAttribute="bottom" constant="8" symbolic="YES" id="2Fw-XL-668"/>
+                            <constraint firstItem="V7t-kV-Wky" firstAttribute="centerY" secondItem="ARS-s5-u1s" secondAttribute="centerY" id="L4y-9W-Pbf"/>
+                            <constraint firstItem="V7t-kV-Wky" firstAttribute="leading" secondItem="ARS-s5-u1s" secondAttribute="trailing" constant="8" symbolic="YES" id="Vwu-Jc-eeN"/>
+                            <constraint firstItem="Zhp-3l-EFA" firstAttribute="leading" secondItem="ARS-s5-u1s" secondAttribute="leading" id="aZ0-DF-E5Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zhp-3l-EFA" secondAttribute="trailing" id="e1H-jA-GyN"/>
+                            <constraint firstItem="V7t-kV-Wky" firstAttribute="trailing" secondItem="Zhp-3l-EFA" secondAttribute="trailing" id="evf-Jw-U0p"/>
+                            <constraint firstItem="ARS-s5-u1s" firstAttribute="top" secondItem="Zhp-3l-EFA" secondAttribute="bottom" constant="8" id="fAA-PM-ZKX"/>
+                            <constraint firstItem="Zhp-3l-EFA" firstAttribute="leading" secondItem="n2K-Cz-Jsb" secondAttribute="leadingMargin" id="g2W-ZX-PXQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="labelN" destination="V7t-kV-Wky" id="iAN-Cg-mfs"/>
+                        <outlet property="sceneView" destination="Zhp-3l-EFA" id="Un8-Um-vyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>

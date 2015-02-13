@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		50A14B671A8DE5E300F1C921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B661A8DE5E300F1C921 /* AppDelegate.swift */; };
-		50A14B691A8DE5E300F1C921 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B681A8DE5E300F1C921 /* art.scnassets */; };
 		50A14B6B1A8DE5E300F1C921 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B6A1A8DE5E300F1C921 /* GameViewController.swift */; };
 		50A14B6E1A8DE5E300F1C921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B6C1A8DE5E300F1C921 /* Main.storyboard */; };
 		50A14B701A8DE5E300F1C921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B6F1A8DE5E300F1C921 /* Images.xcassets */; };
 		50A14B731A8DE5E300F1C921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B711A8DE5E300F1C921 /* LaunchScreen.xib */; };
 		50A14B7F1A8DE5E300F1C921 /* ThermoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B7E1A8DE5E300F1C921 /* ThermoTests.swift */; };
+		50A14B891A8DE95A00F1C921 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B881A8DE95A00F1C921 /* Particle.swift */; };
+		50A14B991A8DEB1000F1C921 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8B1A8DEB1000F1C921 /* Array.swift */; };
+		50A14B9A1A8DEB1000F1C921 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8C1A8DEB1000F1C921 /* Character.swift */; };
+		50A14B9B1A8DEB1000F1C921 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8D1A8DEB1000F1C921 /* Dictionary.swift */; };
+		50A14B9C1A8DEB1000F1C921 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8E1A8DEB1000F1C921 /* Double.swift */; };
+		50A14B9D1A8DEB1000F1C921 /* ExSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B901A8DEB1000F1C921 /* ExSwift.swift */; };
+		50A14B9E1A8DEB1000F1C921 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B911A8DEB1000F1C921 /* Float.swift */; };
+		50A14B9F1A8DEB1000F1C921 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B921A8DEB1000F1C921 /* Info.plist */; };
+		50A14BA01A8DEB1000F1C921 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B931A8DEB1000F1C921 /* Int.swift */; };
+		50A14BA11A8DEB1000F1C921 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B941A8DEB1000F1C921 /* NSArray.swift */; };
+		50A14BA21A8DEB1000F1C921 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B951A8DEB1000F1C921 /* NSDate.swift */; };
+		50A14BA31A8DEB1000F1C921 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B961A8DEB1000F1C921 /* Range.swift */; };
+		50A14BA41A8DEB1000F1C921 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B971A8DEB1000F1C921 /* Sequence.swift */; };
+		50A14BA51A8DEB1000F1C921 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B981A8DEB1000F1C921 /* String.swift */; };
+		50A14BA71A8DF30500F1C921 /* ParticleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA61A8DF30500F1C921 /* ParticleNode.swift */; };
+		50A14BA91A8DF3C200F1C921 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA81A8DF3C200F1C921 /* Utils.swift */; };
+		50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
+		50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +47,6 @@
 		50A14B611A8DE5E300F1C921 /* Thermo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thermo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A14B651A8DE5E300F1C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A14B661A8DE5E300F1C921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50A14B681A8DE5E300F1C921 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		50A14B6A1A8DE5E300F1C921 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		50A14B6D1A8DE5E300F1C921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50A14B6F1A8DE5E300F1C921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -38,6 +54,25 @@
 		50A14B781A8DE5E300F1C921 /* ThermoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThermoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A14B7D1A8DE5E300F1C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A14B7E1A8DE5E300F1C921 /* ThermoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThermoTests.swift; sourceTree = "<group>"; };
+		50A14B881A8DE95A00F1C921 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
+		50A14B8B1A8DEB1000F1C921 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		50A14B8C1A8DEB1000F1C921 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		50A14B8D1A8DEB1000F1C921 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		50A14B8E1A8DEB1000F1C921 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		50A14B8F1A8DEB1000F1C921 /* ExSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExSwift.h; sourceTree = "<group>"; };
+		50A14B901A8DEB1000F1C921 /* ExSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExSwift.swift; sourceTree = "<group>"; };
+		50A14B911A8DEB1000F1C921 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		50A14B921A8DEB1000F1C921 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A14B931A8DEB1000F1C921 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		50A14B941A8DEB1000F1C921 /* NSArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArray.swift; sourceTree = "<group>"; };
+		50A14B951A8DEB1000F1C921 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		50A14B961A8DEB1000F1C921 /* Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.swift; sourceTree = "<group>"; };
+		50A14B971A8DEB1000F1C921 /* Sequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		50A14B981A8DEB1000F1C921 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		50A14BA61A8DF30500F1C921 /* ParticleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleNode.swift; sourceTree = "<group>"; };
+		50A14BA81A8DF3C200F1C921 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainer.swift; sourceTree = "<group>"; };
+		50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainerNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +114,13 @@
 		50A14B631A8DE5E300F1C921 /* Thermo */ = {
 			isa = PBXGroup;
 			children = (
-				50A14B661A8DE5E300F1C921 /* AppDelegate.swift */,
-				50A14B681A8DE5E300F1C921 /* art.scnassets */,
 				50A14B6A1A8DE5E300F1C921 /* GameViewController.swift */,
-				50A14B6C1A8DE5E300F1C921 /* Main.storyboard */,
-				50A14B6F1A8DE5E300F1C921 /* Images.xcassets */,
-				50A14B711A8DE5E300F1C921 /* LaunchScreen.xib */,
+				50A14BA61A8DF30500F1C921 /* ParticleNode.swift */,
+				50A14B881A8DE95A00F1C921 /* Particle.swift */,
+				50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */,
+				50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */,
 				50A14B641A8DE5E300F1C921 /* Supporting Files */,
+				50A14B8A1A8DEB1000F1C921 /* ExSwift */,
 			);
 			path = Thermo;
 			sourceTree = "<group>";
@@ -93,6 +128,11 @@
 		50A14B641A8DE5E300F1C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50A14BA81A8DF3C200F1C921 /* Utils.swift */,
+				50A14B6C1A8DE5E300F1C921 /* Main.storyboard */,
+				50A14B711A8DE5E300F1C921 /* LaunchScreen.xib */,
+				50A14B6F1A8DE5E300F1C921 /* Images.xcassets */,
+				50A14B661A8DE5E300F1C921 /* AppDelegate.swift */,
 				50A14B651A8DE5E300F1C921 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,6 +153,27 @@
 				50A14B7D1A8DE5E300F1C921 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50A14B8A1A8DEB1000F1C921 /* ExSwift */ = {
+			isa = PBXGroup;
+			children = (
+				50A14B8B1A8DEB1000F1C921 /* Array.swift */,
+				50A14B8C1A8DEB1000F1C921 /* Character.swift */,
+				50A14B8D1A8DEB1000F1C921 /* Dictionary.swift */,
+				50A14B8E1A8DEB1000F1C921 /* Double.swift */,
+				50A14B8F1A8DEB1000F1C921 /* ExSwift.h */,
+				50A14B901A8DEB1000F1C921 /* ExSwift.swift */,
+				50A14B911A8DEB1000F1C921 /* Float.swift */,
+				50A14B921A8DEB1000F1C921 /* Info.plist */,
+				50A14B931A8DEB1000F1C921 /* Int.swift */,
+				50A14B941A8DEB1000F1C921 /* NSArray.swift */,
+				50A14B951A8DEB1000F1C921 /* NSDate.swift */,
+				50A14B961A8DEB1000F1C921 /* Range.swift */,
+				50A14B971A8DEB1000F1C921 /* Sequence.swift */,
+				50A14B981A8DEB1000F1C921 /* String.swift */,
+			);
+			path = ExSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A14B9F1A8DEB1000F1C921 /* Info.plist in Resources */,
 				50A14B731A8DE5E300F1C921 /* LaunchScreen.xib in Resources */,
 				50A14B701A8DE5E300F1C921 /* Images.xcassets in Resources */,
-				50A14B691A8DE5E300F1C921 /* art.scnassets in Resources */,
 				50A14B6E1A8DE5E300F1C921 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +278,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A14B6B1A8DE5E300F1C921 /* GameViewController.swift in Sources */,
+				50A14B991A8DEB1000F1C921 /* Array.swift in Sources */,
+				50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */,
+				50A14BA41A8DEB1000F1C921 /* Sequence.swift in Sources */,
+				50A14BA31A8DEB1000F1C921 /* Range.swift in Sources */,
+				50A14B9D1A8DEB1000F1C921 /* ExSwift.swift in Sources */,
+				50A14B9A1A8DEB1000F1C921 /* Character.swift in Sources */,
+				50A14B891A8DE95A00F1C921 /* Particle.swift in Sources */,
+				50A14BA71A8DF30500F1C921 /* ParticleNode.swift in Sources */,
 				50A14B671A8DE5E300F1C921 /* AppDelegate.swift in Sources */,
+				50A14BA91A8DF3C200F1C921 /* Utils.swift in Sources */,
+				50A14BA11A8DEB1000F1C921 /* NSArray.swift in Sources */,
+				50A14B9B1A8DEB1000F1C921 /* Dictionary.swift in Sources */,
+				50A14BA01A8DEB1000F1C921 /* Int.swift in Sources */,
+				50A14B9C1A8DEB1000F1C921 /* Double.swift in Sources */,
+				50A14BA51A8DEB1000F1C921 /* String.swift in Sources */,
+				50A14BA21A8DEB1000F1C921 /* NSDate.swift in Sources */,
+				50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */,
+				50A14B9E1A8DEB1000F1C921 /* Float.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +420,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Thermo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -411,6 +491,7 @@
 				50A14B841A8DE5E300F1C921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50A14B851A8DE5E300F1C921 /* Build configuration list for PBXNativeTarget "ThermoTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +500,7 @@
 				50A14B871A8DE5E300F1C921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
