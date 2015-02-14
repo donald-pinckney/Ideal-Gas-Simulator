@@ -91,12 +91,33 @@ class RectangularContainerNode: SCNNode {
     
     // Warning: Expensive!
     func updateParticleList() {
-        for c in particleNode.childNodes {
-            c.removeFromParentNode()
+        for c: ParticleNode in particleNode.childNodes as! [ParticleNode] {
+            let p: Particle = c.particle
+            var found = false
+            for op in container.particles {
+                if p === op {
+                    found = true
+                    break
+                }
+            }
+            
+            if !found {
+                c.removeFromParentNode()
+            }
         }
         
         for p in container.particles {
-            particleNode.addChildNode(ParticleNode(particle: p))
+            var found = false
+            for c in particleNode.childNodes as! [ParticleNode] {
+                if p === c.particle {
+                    found = true
+                    break
+                }
+            }
+            
+            if !found {
+                particleNode.addChildNode(ParticleNode(particle: p))
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ class RectangularContainer {
     let lz: Double
     var N: Int = 100 {
         didSet {
-            setupParticles()
+            setupParticles(oldValue)
         }
     }
     
@@ -32,17 +32,22 @@ class RectangularContainer {
         self.ly = ly
         self.lz = lz
         
-        setupParticles()
+        setupParticles(0)
     }
     
     convenience init() {
         self.init(lx: 1, ly: 1, lz: 1)
     }
     
-    func setupParticles() {
-        particles.removeAll(keepCapacity: false)
-        N.times {
-            self.particles.append(Particle(rx: self.lx, ry: self.ly, rz: self.lz))
+    func setupParticles(oldN: Int) {
+        if N < oldN {
+            (oldN - N).times {
+                self.particles.removeLast()
+            }
+        } else {
+            (N - oldN).times {
+                self.particles.append(Particle(rx: self.lx, ry: self.ly, rz: self.lz))
+            }
         }
         
         redraw()
