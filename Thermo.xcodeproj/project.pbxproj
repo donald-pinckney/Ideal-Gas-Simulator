@@ -31,6 +31,23 @@
 		50A14BA91A8DF3C200F1C921 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA81A8DF3C200F1C921 /* Utils.swift */; };
 		50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
 		50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */; };
+		50DAB4041A972FAC00D8D6A4 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B881A8DE95A00F1C921 /* Particle.swift */; };
+		50DAB4051A972FB300D8D6A4 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
+		50DAB4061A972FD000D8D6A4 /* ParticleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA61A8DF30500F1C921 /* ParticleNode.swift */; };
+		50DAB4071A972FD200D8D6A4 /* RectangularContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */; };
+		50DAB4081A972FD600D8D6A4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA81A8DF3C200F1C921 /* Utils.swift */; };
+		50DAB4091A972FF900D8D6A4 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8E1A8DEB1000F1C921 /* Double.swift */; };
+		50DAB40A1A972FFB00D8D6A4 /* ExSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B901A8DEB1000F1C921 /* ExSwift.swift */; };
+		50DAB40B1A972FFC00D8D6A4 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B911A8DEB1000F1C921 /* Float.swift */; };
+		50DAB40C1A972FFE00D8D6A4 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B931A8DEB1000F1C921 /* Int.swift */; };
+		50DAB40D1A97301100D8D6A4 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8B1A8DEB1000F1C921 /* Array.swift */; };
+		50DAB40E1A97301200D8D6A4 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8C1A8DEB1000F1C921 /* Character.swift */; };
+		50DAB40F1A97301300D8D6A4 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B8D1A8DEB1000F1C921 /* Dictionary.swift */; };
+		50DAB4101A97301900D8D6A4 /* NSArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B941A8DEB1000F1C921 /* NSArray.swift */; };
+		50DAB4111A97301A00D8D6A4 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B951A8DEB1000F1C921 /* NSDate.swift */; };
+		50DAB4121A97301D00D8D6A4 /* Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B961A8DEB1000F1C921 /* Range.swift */; };
+		50DAB4131A97301E00D8D6A4 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B971A8DEB1000F1C921 /* Sequence.swift */; };
+		50DAB4141A97302000D8D6A4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B981A8DEB1000F1C921 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -303,7 +320,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DAB4071A972FD200D8D6A4 /* RectangularContainerNode.swift in Sources */,
+				50DAB4061A972FD000D8D6A4 /* ParticleNode.swift in Sources */,
 				50A14B7F1A8DE5E300F1C921 /* ThermoTests.swift in Sources */,
+				50DAB40E1A97301200D8D6A4 /* Character.swift in Sources */,
+				50DAB40F1A97301300D8D6A4 /* Dictionary.swift in Sources */,
+				50DAB4081A972FD600D8D6A4 /* Utils.swift in Sources */,
+				50DAB40D1A97301100D8D6A4 /* Array.swift in Sources */,
+				50DAB4091A972FF900D8D6A4 /* Double.swift in Sources */,
+				50DAB40B1A972FFC00D8D6A4 /* Float.swift in Sources */,
+				50DAB40A1A972FFB00D8D6A4 /* ExSwift.swift in Sources */,
+				50DAB4131A97301E00D8D6A4 /* Sequence.swift in Sources */,
+				50DAB4141A97302000D8D6A4 /* String.swift in Sources */,
+				50DAB4111A97301A00D8D6A4 /* NSDate.swift in Sources */,
+				50DAB4101A97301900D8D6A4 /* NSArray.swift in Sources */,
+				50DAB4121A97301D00D8D6A4 /* Range.swift in Sources */,
+				50DAB40C1A972FFE00D8D6A4 /* Int.swift in Sources */,
+				50DAB4051A972FB300D8D6A4 /* RectangularContainer.swift in Sources */,
+				50DAB4041A972FAC00D8D6A4 /* Particle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +480,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -453,6 +488,7 @@
 				INFOPLIST_FILE = ThermoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thermo.app/Thermo";
 			};
 			name = Debug;
@@ -465,9 +501,11 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = ThermoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thermo.app/Thermo";
 			};
 			name = Release;

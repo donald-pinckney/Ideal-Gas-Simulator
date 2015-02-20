@@ -27,6 +27,10 @@ class RectangularContainer {
     
     var particles: [Particle] = []
     
+    
+    
+    // MARK: - Constructors -
+    
     init(numDims: Int, squareDimen l: Double) {
         dimens = Array(count: numDims, repeatedValue: l)
         
@@ -44,16 +48,9 @@ class RectangularContainer {
             }
         } else {
             (N - oldN).times {
-                self.particles.append(Particle())
+                self.particles.append(Particle(N: self.dimens.count))
             }
         }
-        
-//        self.particles.removeAll()
-//        self.particles.append(Particle(m: 2, r: 0.2, pos: Cartesian(-0.48, 0, 0), v: Cartesian(0.5, 0, 0)))
-//        self.particles.append(Particle(m: 1, r: 0.2, pos: Cartesian(0, -0.1, 0.1), v: Cartesian(0.5, 0, 0)))
-//        self.particles.append(Particle(m: 1, r: 0.2, pos: Cartesian(0.48, 0, 0), v: Cartesian(-0.5, 0, 0)))
-//                        self.particles.append(Particle(rx: self.lx, ry: self.ly, rz: self.lz))
-//                        self.particles.append(Particle(rx: self.lx, ry: self.ly, rz: self.lz))
 
         redraw()
     }
@@ -63,7 +60,7 @@ class RectangularContainer {
         node?.updateParticleList()
     }
     
-    
+    // MARK: - Simulation Update Logic -
     func update(dt: Double) {
         
         for p in particles {
@@ -87,10 +84,10 @@ class RectangularContainer {
             p.redraw()
 
         }
+        
     }
     
     func moveParticle(p: Particle, dt: Double) {
-//        println(dt)
         p.pos += dt * p.v
     }
     
@@ -163,8 +160,11 @@ class RectangularContainer {
                 op.didAlreadyCollide = true
                 
                 
-                assert(momentumBefore == momentumAfter, "Momentum norm has not been conserved.\nP0 = \(momentumBefore)\nPf = \(momentumAfter)\n")
+                assert(momentumBefore == momentumAfter, "Momentum has not been conserved.\nP0 = \(momentumBefore)\nPf = \(momentumAfter)\n")
             }
         }
     }
+    
+    
+    // MARK: - Output Data -
 }

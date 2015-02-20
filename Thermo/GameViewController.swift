@@ -14,8 +14,11 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
 
     @IBOutlet weak var sceneView: SCNView!
     @IBOutlet weak var labelN: UILabel!
+    @IBOutlet weak var labelD: UILabel!
+    
     
     var container: RectangularContainer!
+    var containerNode: RectangularContainerNode!
     var lastTime: NSTimeInterval = 0
     
     override func viewDidLoad() {
@@ -63,7 +66,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         scnView.backgroundColor = UIColor.blackColor()
         
         container = RectangularContainer(numDims: 3, squareDimen: 1)
-        let containerNode = RectangularContainerNode(r: container)
+        containerNode = RectangularContainerNode(r: container)
         scene.rootNode.addChildNode(containerNode)
         
         scnView.delegate = self
@@ -78,7 +81,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         // per-frame code here
         let dt = time - lastTime
         if dt < 0.1 {
-            container.update(dt * 1)
+            container.update(dt)
         }
         lastTime = time
     }
@@ -93,5 +96,19 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         
         labelN.text = "N = \(N)"
         container.N = N
+    }
+    
+    @IBAction func sliderDChanged(sender: UISlider) {
+        var D = Int(round(sender.value))
+        
+        labelD.text = "D = \(D)"
+        
+        let N = container.N
+        
+        containerNode.removeFromParentNode()
+        container = RectangularContainer(numDims: D, squareDimen: 1)
+        container.N = N
+        containerNode = RectangularContainerNode(r: container)
+        sceneView.scene?.rootNode.addChildNode(containerNode)
     }
 }

@@ -31,13 +31,28 @@ struct Cartesian: Printable {
         self.x[1] = y
     }
     
+    init(_ x: Double) {
+        self.init(N: 1)
+        self.x[0] = x
+    }
+    
     var description: String {
         return join(", ", x.map { $0.description })
     }
 }
 
 func cartToSCNVector3(c: Cartesian) -> SCNVector3 {
-    return SCNVector3(x: Float(c.x[0]), y: Float(c.x[1]), z: Float(c.x[2]))
+    if c.N == 3 {
+        return SCNVector3(x: Float(c.x[0]), y: Float(c.x[1]), z: Float(c.x[2]))
+    } else if c.N == 2 {
+        return SCNVector3(x: Float(c.x[0]), y: Float(c.x[1]), z: 0)
+    } else if c.N == 1 {
+        return SCNVector3(x: Float(c.x[0]), y: 0, z: 0)
+    } else if c.N == 0 {
+        return SCNVector3(x: 0, y: 0, z: 0)
+    } else {
+        return SCNVector3(x: Float(c.x[0]), y: Float(c.x[1]), z: Float(c.x[2]))
+    }
 }
 
 func *(lhs: Double, var rhs: Cartesian) -> Cartesian {

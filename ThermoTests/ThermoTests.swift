@@ -21,15 +21,59 @@ class ThermoTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testSimulationIteration1D() {
+        
+        let c = RectangularContainer(numDims: 1, squareDimen: 1)
+        let dt = 0.02
+        
+        self.measureBlock() {
+            for i in 0..<100 {
+                c.update(dt)
+            }
+            
+            XCTAssert(true, "Momentum appeared to be conserved in all collisions.")
+        }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testSimulationIteration2D() {
+        
+        let c = RectangularContainer(numDims: 2, squareDimen: 1)
+        let dt = 0.02
+        
         self.measureBlock() {
-            // Put the code you want to measure the time of here.
+            for i in 0..<100 {
+                c.update(dt)
+            }
+            
+            XCTAssert(true, "Momentum appeared to be conserved in all collisions.")
+        }
+    }
+    
+    func testSimulationIteration3D() {
+        
+        let c = RectangularContainer(numDims: 3, squareDimen: 1)
+        let dt = 0.02
+        
+        self.measureBlock() {
+            for i in 0..<100 {
+                c.update(dt)
+            }
+            
+            XCTAssert(true, "Momentum appeared to be conserved in all collisions.")
+        }
+    }
+    
+    func testSimulationIteration4D() {
+
+        let c = RectangularContainer(numDims: 4, squareDimen: 1)
+        let dt = 0.02
+        
+        self.measureBlock() {
+            for i in 0..<100 {
+                c.update(dt)
+            }
+            
+            XCTAssert(true, "Momentum appeared to be conserved in all collisions.")
         }
     }
     

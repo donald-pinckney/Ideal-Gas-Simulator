@@ -27,6 +27,6 @@ class ParticleNode: SCNNode {
     
     func update() {
         position = cartToSCNVector3(particle.pos)
-        geometry?.firstMaterial?.diffuse.contents = particle.wasOtherParticle ? UIColor.blueColor() : UIColor.redColor()
+        geometry?.firstMaterial?.diffuse.contents = UIColor.redColor()
     }
 }

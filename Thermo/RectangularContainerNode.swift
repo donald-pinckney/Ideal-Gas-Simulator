@@ -37,7 +37,7 @@ class RectangularContainerNode: SCNNode {
         if dimens >= 2 {
             ly = r.dimens[1]
         }
-        if dimens == 3 {
+        if dimens >= 3 {
             lz = r.dimens[2]
         }
 
@@ -108,7 +108,7 @@ class RectangularContainerNode: SCNNode {
     
     // Warning: Expensive!
     func updateParticleList() {
-        for c: ParticleNode in particleNode.childNodes as! [ParticleNode] {
+        for c: ParticleNode in particleNode.childNodes as [ParticleNode] {
             let p: Particle = c.particle
             var found = false
             for op in container.particles {
@@ -125,7 +125,7 @@ class RectangularContainerNode: SCNNode {
         
         for p in container.particles {
             var found = false
-            for c in particleNode.childNodes as! [ParticleNode] {
+            for c in particleNode.childNodes as [ParticleNode] {
                 if p === c.particle {
                     found = true
                     break
