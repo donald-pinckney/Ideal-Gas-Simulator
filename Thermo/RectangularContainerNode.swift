@@ -61,9 +61,9 @@ class RectangularContainerNode: SCNNode {
         let z3 = SCNNode(geometry: zLineGeom)
         z3.position = SCNVector3(x: Float(r.ly / 2.0), y: -Float(r.lz / 2.0), z: 0)
 
-        position = cartToSCNVector3((0, 0, 0))
-        lineNode.position = cartToSCNVector3((0, 0, 0))
-        particleNode.position = cartToSCNVector3((0, 0, 0))
+        position = cartToSCNVector3(Cartesian(0, 0, 0))
+        lineNode.position = cartToSCNVector3(Cartesian(0, 0, 0))
+        particleNode.position = cartToSCNVector3(Cartesian(0, 0, 0))
 
         lineNode.addChildNode(x0)
         lineNode.addChildNode(x1)

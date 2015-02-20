@@ -78,7 +78,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         // per-frame code here
         let dt = time - lastTime
         if dt < 0.1 {
-            container.update(dt)
+            container.update(dt * 1)
         }
         lastTime = time
     }
