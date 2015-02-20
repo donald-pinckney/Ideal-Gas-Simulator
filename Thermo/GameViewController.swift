@@ -62,7 +62,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         // configure the view
         scnView.backgroundColor = UIColor.blackColor()
         
-        container = RectangularContainer(lx: 1, ly: 1, lz: 1)
+        container = RectangularContainer(numDims: 3, squareDimen: 1)
         let containerNode = RectangularContainerNode(r: container)
         scene.rootNode.addChildNode(containerNode)
         

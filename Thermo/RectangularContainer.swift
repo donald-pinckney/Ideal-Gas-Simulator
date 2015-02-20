@@ -11,9 +11,8 @@ import Foundation
 
 class RectangularContainer {
     
-    let lx: Double
-    let ly: Double
-    let lz: Double
+    let dimens: [Double]
+    
     var N: Int = 100 {
         didSet {
             setupParticles(oldValue)
@@ -28,16 +27,14 @@ class RectangularContainer {
     
     var particles: [Particle] = []
     
-    init(lx: Double, ly: Double, lz: Double) {
-        self.lx = lx
-        self.ly = ly
-        self.lz = lz
+    init(numDims: Int, squareDimen l: Double) {
+        dimens = Array(count: numDims, repeatedValue: l)
         
         setupParticles(0)
     }
     
     convenience init() {
-        self.init(lx: 1, ly: 1, lz: 1)
+        self.init(numDims: 3, squareDimen: 1)
     }
     
     func setupParticles(oldN: Int) {
@@ -47,7 +44,7 @@ class RectangularContainer {
             }
         } else {
             (N - oldN).times {
-                self.particles.append(Particle(rx: self.lx, ry: self.ly, rz: self.lz, rs: 2.0, rm: 5.0))
+                self.particles.append(Particle())
             }
         }
         
@@ -100,22 +97,15 @@ class RectangularContainer {
     func collideParticleAndWall(p: Particle, dt: Double) {
         while true {
             var inside = true
-            if p.pos.x >= lx/2 || p.pos.x <= -lx/2 {
-                p.v.x *= -1
-                p.pos.x = p.pos.x > 0 ? lx - p.pos.x : -lx - p.pos.x
-                inside = false
-            }
             
-            if p.pos.y >= ly/2 || p.pos.y <= -ly/2 {
-                p.v.y *= -1
-                p.pos.y = p.pos.y > 0 ? ly - p.pos.y : -ly - p.pos.y
-                inside = false
-            }
-            
-            if p.pos.z >= lz/2 || p.pos.z <= -lz/2 {
-                p.v.z *= -1
-                p.pos.z = p.pos.z > 0 ? lz - p.pos.z : -lz - p.pos.z
-                inside = false
+            for i in 0..<dimens.count {
+                let d = dimens[i]
+                let pos = p.pos.x[i]
+                if pos >= d/2 || pos <= -d/2 {
+                    p.v.x[i] *= -1
+                    p.pos.x[i] = pos > 0 ? d - pos : -d - pos
+                    inside = false
+                }
             }
             
             if inside {
@@ -132,7 +122,7 @@ class RectangularContainer {
                 continue
             }
             
-            let D = distSquare(p.pos, op.pos)
+            let D = distSquare(&p.pos, &op.pos)
             
             if D <= pow(p.r + op.r, 2) {
                 let n = norm(op.pos - p.pos)
