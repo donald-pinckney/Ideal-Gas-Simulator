@@ -30,13 +30,13 @@ class Particle: Printable {
             let rx = 1.0
             let theta = Double.random(min: 0, max: 2*M_PI)
             let phi = Double.random(min: 0, max: M_PI)
-            let speed = Double.random(min: 0, max: 2.0)
+            let speed = Double.random(min: 0, max: 8.0)
             
             let x = speed * sin(phi) * cos(theta)
             let y = speed * sin(phi) * sin(theta)
             let z = speed * cos(phi)
             
-            self.init(m: Double.random(min: 0.1, max: 5.0), pos: Cartesian(Double.random(min: -rx/2, max: rx/2), Double.random(min: -rx/2, max: rx/2), Double.random(min: -rx/2, max: rx/2)),
+            self.init(m: 2.0, pos: Cartesian(Double.random(min: -rx/2, max: rx/2), Double.random(min: -rx/2, max: rx/2), Double.random(min: -rx/2, max: rx/2)),
                                         v: Cartesian(x, y, z))
         } else if N == 2 {
             let rx = 1.0

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5035F9F41A9F9C46005D7BFF /* DPGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5035F9F31A9F9C46005D7BFF /* DPGraphView.m */; };
 		50A14B671A8DE5E300F1C921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B661A8DE5E300F1C921 /* AppDelegate.swift */; };
 		50A14B6B1A8DE5E300F1C921 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B6A1A8DE5E300F1C921 /* GameViewController.swift */; };
 		50A14B6E1A8DE5E300F1C921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A14B6C1A8DE5E300F1C921 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		50A14BA91A8DF3C200F1C921 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA81A8DF3C200F1C921 /* Utils.swift */; };
 		50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
 		50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */; };
+		50B3E0FB1A9F9DE9006A417A /* RectangularContainerGraphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3E0FA1A9F9DE9006A417A /* RectangularContainerGraphing.swift */; };
 		50DAB4041A972FAC00D8D6A4 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B881A8DE95A00F1C921 /* Particle.swift */; };
 		50DAB4051A972FB300D8D6A4 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
 		50DAB4061A972FD000D8D6A4 /* ParticleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA61A8DF30500F1C921 /* ParticleNode.swift */; };
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5035F9F21A9F9C45005D7BFF /* Thermo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Thermo-Bridging-Header.h"; sourceTree = "<group>"; };
+		5035F9F31A9F9C46005D7BFF /* DPGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPGraphView.m; sourceTree = "<group>"; };
+		5035F9F51A9F9C4A005D7BFF /* DPGraphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPGraphView.h; sourceTree = "<group>"; };
 		50A14B611A8DE5E300F1C921 /* Thermo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thermo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A14B651A8DE5E300F1C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50A14B661A8DE5E300F1C921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +95,7 @@
 		50A14BA81A8DF3C200F1C921 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainer.swift; sourceTree = "<group>"; };
 		50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainerNode.swift; sourceTree = "<group>"; };
+		50B3E0FA1A9F9DE9006A417A /* RectangularContainerGraphing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainerGraphing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				50A14B631A8DE5E300F1C921 /* Thermo */,
-				50A14B7B1A8DE5E300F1C921 /* ThermoTests */,
 				50A14B621A8DE5E300F1C921 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,7 +141,10 @@
 				50A14B881A8DE95A00F1C921 /* Particle.swift */,
 				50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */,
 				50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */,
+				50B3E0FA1A9F9DE9006A417A /* RectangularContainerGraphing.swift */,
+				50A14B6C1A8DE5E300F1C921 /* Main.storyboard */,
 				50A14B641A8DE5E300F1C921 /* Supporting Files */,
+				50A14B7B1A8DE5E300F1C921 /* ThermoTests */,
 				50A14B8A1A8DEB1000F1C921 /* ExSwift */,
 			);
 			path = Thermo;
@@ -145,12 +153,14 @@
 		50A14B641A8DE5E300F1C921 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5035F9F51A9F9C4A005D7BFF /* DPGraphView.h */,
+				5035F9F31A9F9C46005D7BFF /* DPGraphView.m */,
 				50A14BA81A8DF3C200F1C921 /* Utils.swift */,
-				50A14B6C1A8DE5E300F1C921 /* Main.storyboard */,
 				50A14B711A8DE5E300F1C921 /* LaunchScreen.xib */,
 				50A14B6F1A8DE5E300F1C921 /* Images.xcassets */,
 				50A14B661A8DE5E300F1C921 /* AppDelegate.swift */,
 				50A14B651A8DE5E300F1C921 /* Info.plist */,
+				5035F9F21A9F9C45005D7BFF /* Thermo-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,7 +172,7 @@
 				50A14B7C1A8DE5E300F1C921 /* Supporting Files */,
 			);
 			path = ThermoTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		50A14B7C1A8DE5E300F1C921 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -297,12 +307,14 @@
 				50A14B6B1A8DE5E300F1C921 /* GameViewController.swift in Sources */,
 				50A14B991A8DEB1000F1C921 /* Array.swift in Sources */,
 				50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */,
+				50B3E0FB1A9F9DE9006A417A /* RectangularContainerGraphing.swift in Sources */,
 				50A14BA41A8DEB1000F1C921 /* Sequence.swift in Sources */,
 				50A14BA31A8DEB1000F1C921 /* Range.swift in Sources */,
 				50A14B9D1A8DEB1000F1C921 /* ExSwift.swift in Sources */,
 				50A14B9A1A8DEB1000F1C921 /* Character.swift in Sources */,
 				50A14B891A8DE95A00F1C921 /* Particle.swift in Sources */,
 				50A14BA71A8DF30500F1C921 /* ParticleNode.swift in Sources */,
+				5035F9F41A9F9C46005D7BFF /* DPGraphView.m in Sources */,
 				50A14B671A8DE5E300F1C921 /* AppDelegate.swift in Sources */,
 				50A14BA91A8DF3C200F1C921 /* Utils.swift in Sources */,
 				50A14BA11A8DEB1000F1C921 /* NSArray.swift in Sources */,
@@ -454,11 +466,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_OPTIMIZATION_LEVEL = s;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = Thermo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thermo/Thermo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 			};
 			name = Debug;
 		};
@@ -466,9 +480,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				INFOPLIST_FILE = Thermo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Thermo/Thermo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 			};
 			name = Release;
 		};

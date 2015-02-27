@@ -34,14 +34,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDE-ra-oMk">
                                 <rect key="frame" x="392" y="28" width="360" height="360"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Variables" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gny-RX-mzt">
-                                        <rect key="frame" x="129" y="0.0" width="100" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input Variables" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gny-RX-mzt">
+                                        <rect key="frame" x="98" y="0.0" width="163.5" height="31"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N = 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7t-kV-Wky">
                                         <rect key="frame" x="8" y="39" width="61" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="SRI-mj-pbi"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -62,10 +65,23 @@
                                             <action selector="sliderDChanged:" destination="BV1-FR-VrT" eventType="valueChanged" id="BFo-gJ-Y1m"/>
                                         </connections>
                                     </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output Calculations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvS-zQ-pA9">
+                                        <rect key="frame" x="69" y="111" width="221" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="∑ KE =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGd-wJ-10I">
+                                        <rect key="frame" x="8" y="150" width="52" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="iFE-MD-vs2" firstAttribute="leading" secondItem="SDE-ra-oMk" secondAttribute="leading" constant="8" id="6g7-6Y-buE"/>
+                                    <constraint firstItem="zvS-zQ-pA9" firstAttribute="top" secondItem="R6G-Ia-8O1" secondAttribute="bottom" constant="8" id="9jO-bc-LIz"/>
                                     <constraint firstItem="V7t-kV-Wky" firstAttribute="leading" secondItem="SDE-ra-oMk" secondAttribute="leading" constant="8" id="DGt-Yl-uXJ"/>
                                     <constraint firstAttribute="centerX" secondItem="gny-RX-mzt" secondAttribute="centerX" constant="0.25" id="Jdw-xa-llt"/>
                                     <constraint firstItem="gny-RX-mzt" firstAttribute="top" secondItem="SDE-ra-oMk" secondAttribute="top" id="K2w-6d-pLB"/>
@@ -73,11 +89,18 @@
                                     <constraint firstItem="R6G-Ia-8O1" firstAttribute="leading" secondItem="ARS-s5-u1s" secondAttribute="leading" id="OQ9-zF-jHj"/>
                                     <constraint firstItem="iFE-MD-vs2" firstAttribute="centerY" secondItem="R6G-Ia-8O1" secondAttribute="centerY" constant="-0.75" id="X4z-FW-gmB"/>
                                     <constraint firstAttribute="trailing" secondItem="R6G-Ia-8O1" secondAttribute="trailing" constant="7.5" id="Z8m-bq-rah"/>
+                                    <constraint firstItem="AGd-wJ-10I" firstAttribute="top" secondItem="zvS-zQ-pA9" secondAttribute="bottom" constant="8" id="aYf-50-a8A"/>
                                     <constraint firstItem="V7t-kV-Wky" firstAttribute="top" secondItem="gny-RX-mzt" secondAttribute="bottom" constant="8" id="b6U-Z6-CUQ"/>
+                                    <constraint firstAttribute="centerX" secondItem="zvS-zQ-pA9" secondAttribute="centerX" id="btx-Sp-6J0"/>
                                     <constraint firstItem="ARS-s5-u1s" firstAttribute="leading" secondItem="V7t-kV-Wky" secondAttribute="trailing" constant="9" id="fRF-Bh-qKg"/>
+                                    <constraint firstItem="AGd-wJ-10I" firstAttribute="leading" secondItem="iFE-MD-vs2" secondAttribute="leading" id="gG0-nE-w3r"/>
                                     <constraint firstItem="iFE-MD-vs2" firstAttribute="top" secondItem="V7t-kV-Wky" secondAttribute="bottom" constant="18" id="veW-UN-JIA"/>
                                     <constraint firstAttribute="trailing" secondItem="ARS-s5-u1s" secondAttribute="trailing" constant="7.5" id="wtf-1j-c0m"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="URU-II-aNe" customClass="DPGraphView">
+                                <rect key="frame" x="16" y="396" width="736" height="608"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,11 +108,15 @@
                             <constraint firstItem="Zhp-3l-EFA" firstAttribute="top" secondItem="D94-E3-Oyx" secondAttribute="bottom" constant="8" symbolic="YES" id="2Fw-XL-668"/>
                             <constraint firstItem="SDE-ra-oMk" firstAttribute="top" secondItem="Zhp-3l-EFA" secondAttribute="top" id="32q-R7-OFI"/>
                             <constraint firstItem="SDE-ra-oMk" firstAttribute="trailing" secondItem="n2K-Cz-Jsb" secondAttribute="trailingMargin" id="7WS-4F-Wnl"/>
+                            <constraint firstItem="ZaR-qh-mKA" firstAttribute="top" secondItem="URU-II-aNe" secondAttribute="bottom" constant="20" id="N3J-l3-vX6"/>
                             <constraint firstItem="Zhp-3l-EFA" firstAttribute="width" secondItem="SDE-ra-oMk" secondAttribute="width" id="NEn-PF-1kv"/>
                             <constraint firstItem="SDE-ra-oMk" firstAttribute="height" secondItem="Zhp-3l-EFA" secondAttribute="height" id="dbv-Xm-8et"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zhp-3l-EFA" secondAttribute="trailing" id="e1H-jA-GyN"/>
                             <constraint firstItem="Zhp-3l-EFA" firstAttribute="leading" secondItem="n2K-Cz-Jsb" secondAttribute="leadingMargin" id="g2W-ZX-PXQ"/>
+                            <constraint firstItem="URU-II-aNe" firstAttribute="trailing" secondItem="SDE-ra-oMk" secondAttribute="trailing" id="ieX-bG-obK"/>
+                            <constraint firstItem="URU-II-aNe" firstAttribute="top" secondItem="Zhp-3l-EFA" secondAttribute="bottom" constant="8" id="uNK-RR-frI"/>
                             <constraint firstItem="SDE-ra-oMk" firstAttribute="leading" secondItem="Zhp-3l-EFA" secondAttribute="trailing" constant="16" id="w2V-fg-vnn"/>
+                            <constraint firstItem="URU-II-aNe" firstAttribute="leading" secondItem="Zhp-3l-EFA" secondAttribute="leading" id="zJN-vq-uIF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -99,9 +126,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="graphView" destination="URU-II-aNe" id="rWA-aJ-JbS"/>
                         <outlet property="labelD" destination="iFE-MD-vs2" id="zFI-r6-MNn"/>
                         <outlet property="labelN" destination="V7t-kV-Wky" id="iAN-Cg-mfs"/>
                         <outlet property="sceneView" destination="Zhp-3l-EFA" id="Un8-Um-vyv"/>
+                        <outlet property="totalKELabel" destination="AGd-wJ-10I" id="NXi-be-kbL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

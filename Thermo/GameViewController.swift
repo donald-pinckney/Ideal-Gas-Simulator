@@ -16,8 +16,29 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     @IBOutlet weak var labelN: UILabel!
     @IBOutlet weak var labelD: UILabel!
     
+    @IBOutlet weak var totalKELabel: UILabel!
     
-    var container: RectangularContainer!
+    @IBOutlet weak var graphView: DPGraphView! {
+        didSet {
+            graphView.dataSource = container
+            graphView.minX = 0
+            graphView.maxX = 13
+            graphView.minY = 0
+            graphView.maxY = 30
+            graphView.numberOfHistogramBars = 30
+//            graphView.displayGridlines = true
+//            graphView.displayAxes = true
+//            graphView.dashGridlines = true
+            graphView.displayAsBoxedPlot = true
+        }
+    }
+    
+    var container: RectangularContainer! {
+        didSet {
+            graphView.dataSource = container
+        }
+    }
+    
     var containerNode: RectangularContainerNode!
     var lastTime: NSTimeInterval = 0
     
@@ -83,6 +104,15 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         if dt < 0.1 {
             container.update(dt)
         }
+        
+        // Do stuff with output calculations
+        let totalKE = container.totalKE
+        dispatch_async(dispatch_get_main_queue()) {
+            self.totalKELabel.text = "∑ KE = \(totalKE)"
+            self.graphView.setNeedsDisplay()
+        }
+        
+        
         lastTime = time
     }
     

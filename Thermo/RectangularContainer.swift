@@ -9,11 +9,11 @@
 import Foundation
 
 
-class RectangularContainer {
+class RectangularContainer: NSObject {
     
     let dimens: [Double]
     
-    var N: Int = 100 {
+    var N: Int = 200 {
         didSet {
             setupParticles(oldValue)
         }
@@ -28,16 +28,21 @@ class RectangularContainer {
     var particles: [Particle] = []
     
     
+    // MARK: - Output Calculations
+    var totalKE: Double = 0
+    
+    
     
     // MARK: - Constructors -
     
     init(numDims: Int, squareDimen l: Double) {
         dimens = Array(count: numDims, repeatedValue: l)
+        super.init()
         
         setupParticles(0)
     }
     
-    convenience init() {
+    convenience override init() {
         self.init(numDims: 3, squareDimen: 1)
     }
     
@@ -79,12 +84,14 @@ class RectangularContainer {
             
         }
         
+        totalKE = 0
         for p in particles {
             p.didAlreadyCollide = false
             p.redraw()
-
+            
+            // Do output calculations
+            totalKE += p.m * magSquare(p.v) / 2
         }
-        
     }
     
     func moveParticle(p: Particle, dt: Double) {
