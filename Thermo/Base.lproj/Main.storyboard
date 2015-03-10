@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -98,7 +98,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ARS-s5-u1s" secondAttribute="trailing" constant="7.5" id="wtf-1j-c0m"/>
                                 </constraints>
                             </view>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="URU-II-aNe" customClass="DPGraphView">
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="URU-II-aNe" customClass="DPMovingAverageGraphView" customModule="Thermo" customModuleProvider="target">
                                 <rect key="frame" x="16" y="396" width="736" height="608"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>

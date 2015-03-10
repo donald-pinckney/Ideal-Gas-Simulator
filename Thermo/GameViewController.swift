@@ -18,7 +18,7 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
     
     @IBOutlet weak var totalKELabel: UILabel!
     
-    @IBOutlet weak var graphView: DPGraphView! {
+    @IBOutlet weak var graphView: DPMovingAverageGraphView! {
         didSet {
             graphView.dataSource = container
             graphView.minX = 0

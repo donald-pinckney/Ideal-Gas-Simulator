@@ -55,7 +55,9 @@ extension RectangularContainer: DPGraphViewDataSource {
     
     
     func graphView(graphView: DPGraphView!, yValueForXValue x: CGFloat, onPlotWithIndex plotIndex: Int) -> CGFloat {
-        let vvps = pow(Double(x), 2)
+        let f = Double(dimens.count)
+
+        let vvps = pow(Double(x) / sqrt(f / 3), 2)
         
         return CGFloat(4.0 / sqrt(M_PI) * vvps * exp(-vvps))
     }

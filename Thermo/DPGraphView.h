@@ -63,5 +63,7 @@ typedef enum : NSUInteger {
 
 @property (nonatomic) BOOL displayAsBoxedPlot; // Disables axes, enables a solid line around the graph view, and put labels on the sides of those lines - Common for engineering applications
 
+- (CGFloat) getHistogramHeightForStart:(CGFloat)start end:(CGFloat)end onPlotWithIndex:(NSInteger)plotIndex;
+- (void) startNewHistogramCycle;
 
 @end

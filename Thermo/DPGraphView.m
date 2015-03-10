@@ -165,6 +165,8 @@
     
     
     // Draw plots
+    [self startNewHistogramCycle];
+
     NSUInteger numPlots = [self.dataSource numberOfPlotsInGraphView:self];
     for(NSUInteger i = 0; i < numPlots; i++) {
         UIColor *plotColor = [UIColor blackColor];
@@ -187,8 +189,8 @@
         } else if(plotType == DPGraphTypeHistogramLine) {
             [self drawHistogramWithIndex:i lineHistogram:YES];
         }
-        
     }
+    
     
     // Draw axes labels
     [self drawAxesLabels];
@@ -373,7 +375,8 @@
         CGFloat start = self.minX + i * chunkSize;
         CGFloat end = self.minX + (i + 1) * chunkSize;
         
-        CGFloat height = [self.dataSource graphView:self histogramHeightForStart:start end:end onPlotWithIndex:plotIndex];
+        CGFloat height = [self getHistogramHeightForStart:start end:end onPlotWithIndex:plotIndex];
+//        NSLog(@"%f", height);
         integral += height * (end - start);
         
         if (lineHistogram) {
@@ -409,7 +412,7 @@
         } CGContextRestoreGState(UIGraphicsGetCurrentContext());
     }
     
-    NSLog(@"%f", integral);
+//    NSLog(@"%f", integral);
     
     
 }
@@ -457,6 +460,16 @@
     [numericLabel drawInRect:CGRectIntegral(rect) withAttributes:[self axesLabelsAttributes]];
 
     
+}
+
+- (void) startNewHistogramCycle
+{
+    
+}
+
+- (CGFloat) getHistogramHeightForStart:(CGFloat)start end:(CGFloat)end onPlotWithIndex:(NSInteger)plotIndex
+{
+    return [self.dataSource graphView:self histogramHeightForStart:start end:end onPlotWithIndex:plotIndex];
 }
 
 

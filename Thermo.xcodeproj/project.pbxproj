@@ -33,6 +33,7 @@
 		50A14BAB1A8DF67000F1C921 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
 		50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */; };
 		50B3E0FB1A9F9DE9006A417A /* RectangularContainerGraphing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3E0FA1A9F9DE9006A417A /* RectangularContainerGraphing.swift */; };
+		50CA40941AAEC28C00342776 /* DPMovingAverageGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CA40931AAEC28C00342776 /* DPMovingAverageGraphView.swift */; };
 		50DAB4041A972FAC00D8D6A4 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14B881A8DE95A00F1C921 /* Particle.swift */; };
 		50DAB4051A972FB300D8D6A4 /* RectangularContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */; };
 		50DAB4061A972FD000D8D6A4 /* ParticleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A14BA61A8DF30500F1C921 /* ParticleNode.swift */; };
@@ -96,6 +97,7 @@
 		50A14BAA1A8DF67000F1C921 /* RectangularContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainer.swift; sourceTree = "<group>"; };
 		50A14BAC1A8DF7DD00F1C921 /* RectangularContainerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainerNode.swift; sourceTree = "<group>"; };
 		50B3E0FA1A9F9DE9006A417A /* RectangularContainerGraphing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangularContainerGraphing.swift; sourceTree = "<group>"; };
+		50CA40931AAEC28C00342776 /* DPMovingAverageGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DPMovingAverageGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			children = (
 				5035F9F51A9F9C4A005D7BFF /* DPGraphView.h */,
 				5035F9F31A9F9C46005D7BFF /* DPGraphView.m */,
+				50CA40931AAEC28C00342776 /* DPMovingAverageGraphView.swift */,
 				50A14BA81A8DF3C200F1C921 /* Utils.swift */,
 				50A14B711A8DE5E300F1C921 /* LaunchScreen.xib */,
 				50A14B6F1A8DE5E300F1C921 /* Images.xcassets */,
@@ -325,6 +328,7 @@
 				50A14BA21A8DEB1000F1C921 /* NSDate.swift in Sources */,
 				50A14BAD1A8DF7DD00F1C921 /* RectangularContainerNode.swift in Sources */,
 				50A14B9E1A8DEB1000F1C921 /* Float.swift in Sources */,
+				50CA40941AAEC28C00342776 /* DPMovingAverageGraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
