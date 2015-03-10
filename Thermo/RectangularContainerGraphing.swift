@@ -11,16 +11,27 @@ import Foundation
 extension RectangularContainer: DPGraphViewDataSource {
     
     func graphView(graphView: DPGraphView!, typeOfPlotForIndex plotIndex: Int) -> DPGraphType {
-        return DPGraphTypeHistogramBar
+        switch(plotIndex) {
+        case 0:
+            return DPGraphTypeHistogramBar
+        case 1:
+            return DPGraphTypeContinuous
+        default:
+            fatalError("ERROR")
+        }
     }
     
     func graphView(graphView: DPGraphView!, histogramHeightForStart start: CGFloat, end: CGFloat, onPlotWithIndex plotIndex: Int) -> CGFloat {
-        var particles = self.particles
+        let f = Double(dimens.count)
+        let T = totalKE * 2 / f / (Double(N)*Kb)
+        let m = particles[0].m
+        let vp = sqrt(2 * Kb * T / m)
+        
         let c = particles.filter({ p in
-            let v = mag(p.v)
+            let v = mag(p.v) / vp
             return v >= Double(start) && v < Double(end)
         }).count
-        return CGFloat(c)
+        return CGFloat(c) / CGFloat(N) / (end - start)
     }
     
     func graphView(graphView: DPGraphView!, numberOfPointsForIndex plotIndex: Int) -> Int {
@@ -31,20 +42,33 @@ extension RectangularContainer: DPGraphViewDataSource {
         return CGPoint(x: CGFloat(pointIndex - 2), y: CGFloat([0, -1, 1, -2, 2][pointIndex]))
     }
     
+    func graphView(graphView: DPGraphView!, colorForPlotIndex plotIndex: UInt) -> UIColor! {
+        switch(plotIndex) {
+        case 0:
+            return UIColor.redColor()
+        case 1:
+            return UIColor.redColor()
+        default:
+            fatalError("ERROR")
+        }
+    }
+    
     
     func graphView(graphView: DPGraphView!, yValueForXValue x: CGFloat, onPlotWithIndex plotIndex: Int) -> CGFloat {
-        return x*x
+        let vvps = pow(Double(x), 2)
+        
+        return CGFloat(4.0 / sqrt(M_PI) * vvps * exp(-vvps))
     }
     
     func numberOfPlotsInGraphView(graphView: DPGraphView!) -> Int {
-        return 1
+        return N > 0 ? 2 : 0
     }
     
     func XAxisLabelInGraphView(graphView: DPGraphView!) -> String! {
-        return "X"
+        return "v / vp"
     }
     
     func YAxisLabelInGraphView(graphView: DPGraphView!) -> String! {
-        return "Y"
+        return "Probability Density"
     }
 }

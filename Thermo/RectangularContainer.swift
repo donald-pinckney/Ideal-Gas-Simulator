@@ -8,6 +8,9 @@
 
 import Foundation
 
+let Kb = 1.0
+
+
 
 class RectangularContainer: NSObject {
     

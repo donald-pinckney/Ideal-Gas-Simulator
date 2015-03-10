@@ -178,6 +178,11 @@
         } else if(plotType == DPGraphTypeDiscrete) {
             [self drawDiscretePlotWithIndex:i];
         } else if(plotType == DPGraphTypeHistogramBar) {
+            CGFloat colors[4];
+            [plotColor getHue:&colors[0] saturation:&colors[1] brightness:&colors[2] alpha:&colors[3]];
+            UIColor *shadingColor = [UIColor colorWithHue:colors[0] saturation:0.5*colors[1] brightness:colors[2] alpha:0.2*colors[3]];
+            [shadingColor setFill];
+            
             [self drawHistogramWithIndex:i lineHistogram:NO];
         } else if(plotType == DPGraphTypeHistogramLine) {
             [self drawHistogramWithIndex:i lineHistogram:YES];
@@ -363,11 +368,13 @@
     
     CGFloat chunkSize = (self.maxX - self.minX) / self.numberOfHistogramBars;
     
+    CGFloat integral = 0;
     for(NSUInteger i = 0; i < self.numberOfHistogramBars; i++) {
         CGFloat start = self.minX + i * chunkSize;
         CGFloat end = self.minX + (i + 1) * chunkSize;
         
         CGFloat height = [self.dataSource graphView:self histogramHeightForStart:start end:end onPlotWithIndex:plotIndex];
+        integral += height * (end - start);
         
         if (lineHistogram) {
             CGPoint point = CGPointMake((start + end) / 2, height);
@@ -387,6 +394,7 @@
                 [graphClipPath addClip];
                 bar.lineWidth = 3.0f;
                 [bar stroke];
+                [bar fill];
             } CGContextRestoreGState(UIGraphicsGetCurrentContext());
             
         }
@@ -400,6 +408,8 @@
             [path stroke];
         } CGContextRestoreGState(UIGraphicsGetCurrentContext());
     }
+    
+    NSLog(@"%f", integral);
     
     
 }

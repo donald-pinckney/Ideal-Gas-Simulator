@@ -22,9 +22,9 @@ class GameViewController: UIViewController, SCNSceneRendererDelegate {
         didSet {
             graphView.dataSource = container
             graphView.minX = 0
-            graphView.maxX = 13
+            graphView.maxX = 13 / 3.68182944105251
             graphView.minY = 0
-            graphView.maxY = 30
+            graphView.maxY = 1
             graphView.numberOfHistogramBars = 30
 //            graphView.displayGridlines = true
 //            graphView.displayAxes = true
